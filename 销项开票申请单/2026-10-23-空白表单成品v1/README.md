@@ -1,6 +1,6 @@
 # 销项开票申请单 空白表单成品 v1（2026-10-23）
 
-**现行交付版**（本表单首版）。
+**已被同日 v2 取代，请勿再导入**（v2 在 `../2026-10-23-空白表单成品v2/`：仅修 main.xul 布局与列宽——查询头压工具栏 6 对重叠、表头折行、网格未撑满；功能与口径与 v1 完全一致）。本文件夹保留作首版存档。
 
 - 交付物：`销项开票申请单_实例化表单_v1.zip`（9155 B，SHA-256 `de7babe15e72ef23d623b4649d2f57c790ac85d9ac153b88717ebec1fdfc83d6`）。**zip 本体待 Alan 网页上传至本文件夹**；本地原件在 `~/workspace/projects/xfy-project/work/2026-10-23-invoapply-package/`。
 - 内容：以 Alan 上传的空白表单（upload-17.zip，formid `1te8rhm10anw30hi`、formname `cskq.sza.xxfpsqs`）为身份底子，整体移植服务器直建版「销项开票申请单」（formid `1qnyaq9q8shnwbas`，公式纠正后 v1.1.82.2 回读真值）的全部功能：查询头 + 提取/保存申请/撤销申请/全选/全消 + 可编辑申请明细网格、数据集 ds_qry/ds_apply、宏 sql_apply_list、服务端写回 Srv_SaveInvoApply/Srv_CancelInvoApply（旧值守卫、点名回执）。源空白件是设计注册文件（.reg.form、无 orgid），成品按实例化口径校正为 `1te8rhm10anw30hi_00000000000.iform`。
