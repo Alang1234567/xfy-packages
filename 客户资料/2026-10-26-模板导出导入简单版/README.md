@@ -1,9 +1,10 @@
-# 客户资料 模板导出导入版 v1（简单版，2026-10-26）
+# 客户资料 模板导出导入版（简单版，2026-10-26；现行 v1.1）
 
 给客户资料（2p1teo4k24z55h5x）主工具栏加两个按钮：「模板导出」（55 列、列名=字段标题、带一行示例）和「Excel导入」（按列名匹配——标题或字段 id 都认——把第一行数据回写到当前页面对应字段，只回写不落库，保存仍走原生保存按钮）。
 
-- 交付物：`客户资料_模板导出导入版_v1.zip`（40,978 B，SHA-256 `334d2329aeada67edb59f784669d745ebba1d63e996e7df67a266b6336b4f08e`）。**zip 本体待 Alan 网页上传至本文件夹**；本地原件在 `~/workspace/projects/xfy-project/work/2026-10-26-clientdoc-excel/build-simple/`。
-- 基线：Alan 2026-10-26 上传的 upload-19.zip（2p1teo 实例 v1.1.82.615）逐字节为底。差异：main.xul 三处定点插入（两按钮 + 隐藏网格 grid_mb + 数据集 ds_mb/ds_impback，摘除后与基线逐字节全等）、props.json 仅新增宏 `uf_sql_impback`、main.js/server.js 仅末尾追加函数，其余成员逐字节未动。自验：verify 35 项 + fixture 46 项断言全过（见同文件夹《自验报告.md》）。
+- **现行交付物（v1.1 热修）**：`客户资料_模板导出导入版_v1.1.zip`（40,977 B，SHA-256 `5507a50e5f7655ec948397f0869e70d02304197031a09565b4dfcb2bfb171bd4`）。**zip 本体待 Alan 网页上传至本文件夹**；本地原件在 `~/workspace/projects/xfy-project/work/2026-10-26-clientdoc-excel/build-simple/`。v1 包（`客户资料_模板导出导入版_v1.zip`，SHA-256 `334d2329…`）已被 v1.1 取代，勿再导入。
+- **v1.1 修什么**：v1 现场点「Excel导入」报 `parameter: onlyid is not evaluated`——回读宏 `uf_sql_impback` 声明参数 `:onlyid` 与客户端 params 键 `K_OnlyId` 对不上名（平台宏参数按声明名精确绑定；`:entid` 是上下文参数可自动求值故未被点名）。修复仅 props 宏 SQL 一处 token（`:onlyid` → `:K_OnlyId`），其余成员与 v1 逐字节不变。自验扩至 verify 52 项（新增宏参数契约对账 + v1↔v1.1 定点差异对账）+ fixture 54 项（新增完整调用序列用例与可复现现场报错的负控），见同文件夹《自验报告.md》文末 v1.1 补充与《成品说明.md》v1.1 热修节。
+- 基线：Alan 2026-10-26 上传的 upload-19.zip（2p1teo 实例 v1.1.82.615）逐字节为底。差异：main.xul 三处定点插入（两按钮 + 隐藏网格 grid_mb + 数据集 ds_mb/ds_impback，摘除后与基线逐字节全等）、props.json 仅新增宏 `uf_sql_impback`、main.js/server.js 仅末尾追加函数，其余成员逐字节未动。
 - 实现：平台原生机制（与销售开票同源）——模板导出 = 隐藏网格 `exportTo(0)`；导入 = `FormUtil.importFile` 服务端回调按列名匹配，结果经暂存表 `t_2p1teo4k24z55h5x_ds_impback` 回读后逐字段写回 DsMain 当前行。多行只取第一行并在提示中注明；未匹配列名在提示中列出。细节与模板 55 列清单见同文件夹《成品说明.md》。
 - 导入后注意：先关掉客户资料全部已打开页签再重开测试；重点验证《成品说明.md》「现场验证项」（示例行是否随模板导出、importFile 对 xls/xlsx 与表头形态的处理、temptable 首次自动建表）。
 - 背景：本版为 Alan 2026-10-26 16:47 定案的简单版；同日早先的克隆独立导入表方案（`客户资料导入（销售版）/2026-10-26-销售版导入v1/` 与 `客户资料/2026-10-26-导入入口v1/`）已作废，勿再导入。
