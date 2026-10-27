@@ -1,0 +1,11 @@
+# 销项开票申请单 成品 v5.5.1（2026-10-27，热修复：申请日期查询漏数）
+
+**现行交付版**（只修查询日期过滤；全量包含 v5.5，取代 v5.5）。
+
+- 交付物：`销项开票申请单_实例化表单_v5.5.1.zip`（24,190 B，SHA-256 `8914e5e1e17042da3ab5b71355da0fbbd0861363a51ec4bfd7076720028eac91`；内层 iform SHA-256 `8cab5087209813471831b40ddf00077ed586053f8c563ccb43f97101d7da2c9f`）。**zip 本体待 Alan 网页上传至本文件夹**；本地原件在 `~/workspace/projects/xfy-project/work/2026-10-23-invoapply-package/`。
+- 问题：v5.5 按申请日期查询漏数——昨天申请的 4 条蓝字单一条查不出，只剩 3 条红字单。
+- 根因：存量申请时间有两种格式——新版标准格式 `2026-10-26 15:04:33`，与早期裸 sysdate 写入的 NLS 格式 `26-10月-26`；v5.5 按前者字符串比较，`26-…` 被上限滤掉，申请时间为空的行也被滤掉。
+- 修复（仅 sql_qmt_list 一宏）：日期键归一——标准格式取前 10 位；`DD-MON-RR` 形态拼成 `20RR-MM-DD`；归一不出（空/未知）按出库日期兜底。main.js/server.js/main.xul 与 v5.5 逐字节一致。
+- 验证：verify_package_v551 全过；test_fixture_v551 **216/216**；归一逻辑三种存量形态离线验算通过。未做 Oracle 活体验证，以现场复测为准。
+- 导入：已导 v5.5 的覆盖导本包，无新增前置；导后关全部页签重开，同一范围应出齐 4 条蓝字单 + 3 条红字单。
+- 源码/过程存档：-xfyproject `docs/changes/2026-10-27-销项开票申请单v5.5.1.md`；脚本在 xfy-project `work/2026-10-23-invoapply-package/`（build_v551.py / verify_package_v551.py / test_fixture_v551.js）。
