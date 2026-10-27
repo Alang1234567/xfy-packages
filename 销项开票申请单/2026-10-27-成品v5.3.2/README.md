@@ -1,0 +1,13 @@
+# 销项开票申请单 成品 v5.3.2（2026-10-27，正票口径版）
+
+**现行交付版**（修 v5.3.1 复测暴露的已开票行蓝/红两票混拼问题；全量包含 v5.3.1，取代 v5.3.1）。
+
+- 交付物：`销项开票申请单_实例化表单_v5.3.2.zip`（23,710 B，SHA-256 `e96aabaddac0ed3575dd126855089377ed51d719a040f3d57223035a01a164bd`；内层 iform SHA-256 `473586ba296fcc1c1fc857b952fef594e6c21325f2d2d5a775e5a001e8fd8cc3`）。**zip 本体待 Alan 网页上传至本文件夹**；本地原件在 `~/workspace/projects/xfy-project/work/2026-10-23-invoapply-package/`。
+- 改动（仅查询两宏 sql_qmt_list / sql_qdt_list，共 7 处；字段、其余宏、JS 逐字节不动）：
+  1. 发票展示列只取**本单正票**：内层联来源出库单 SaleOutMt 按其 RuleId 判正票（退货类→红票 isch='Y'，其余→蓝票），冲红红票不再混入发票号/登记单号/日期/地址的拼接；
+  2. 红字勾、正/负属性回正票口径，冲红完成看正票自己的 ChongHong；
+  3. 申请状态补「**已冲红**」档：正票存在且全部 ChongHong='Y' 时优先于金额口径三档（主/明细同口径）。
+- 金额口径不变：已登记/已开金额仍是出库单回写列净额，整单冲红后归零属实，看状态「已冲红」。
+- 验证：verify_package_v532 **175 项全过**（变换重构自证、audit 93/93）；test_fixture_v532 **206/206**。
+- 导入：已导 v5.3.1 的覆盖导本包，无新增前置；导后关全部页签重开复测（宏业行：单发票号/单日期/红字不勾/状态已冲红）。
+- 源码/过程存档：-xfyproject `docs/changes/2026-10-27-销项开票申请单v5.3.2.md`；脚本在 xfy-project `work/2026-10-23-invoapply-package/`（build_v532.py / verify_package_v532.py / test_fixture_v532.js）。

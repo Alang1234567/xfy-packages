@@ -1,6 +1,6 @@
 # 销项开票申请单 成品 v5.3.1（2026-10-27，热修复版）
 
-**现行交付版**（修 v5.3 查询提取报 ORA-12704 字符集不匹配；全量包含 v5.3，取代 v5.3）。
+**已被 v5.3.2 取代**（2026-10-27 正票口径+已冲红状态，见 `../2026-10-27-成品v5.3.2/`；本版为修 v5.3 查询提取报 ORA-12704 字符集不匹配；全量包含 v5.3，取代 v5.3）。
 
 - 交付物：`销项开票申请单_实例化表单_v5.3.1.zip`（23,584 B，SHA-256 `f1bf1fc426b37f2bf2e90205c359b689c31bdd597a10e280c48a28bb01ab0954`；内层 iform SHA-256 `b508614c0d0e2f13913cc0f02933515be21ca42196efebd54eed30166f7121ff`）。**zip 本体待 Alan 网页上传至本文件夹**；本地原件在 `~/workspace/projects/xfy-project/work/2026-10-23-invoapply-package/`。
 - 根因：sql_qmt_list 的 PicLink 附件地址拼接漏了 15dka 原式的 `to_char` 包裹——AttachId（NVARCHAR2）拼接结果属国家字符集，与 CASE 另一分支 InvoiceMt.K_InvoiceUrl（VARCHAR2）撞集，Oracle 报 ORA-12704、整宏失败。
