@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TZyReport Version="5.6.1" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.AllowEdit="False" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="预设" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="46321.4697603935" ReportOptions.Description.Text="" ReportOptions.LastChange="46321.6028293866" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.">
+  <Datasets>
+    <item DataSetName="ds_qry"/>
+    <item DataSetName="ds_mt"/>
+    <item DataSetName="ds_dt"/>
+    <item DataSetName="ds_rmt"/>
+    <item DataSetName="ds_rdt"/>
+    <item DataSetName="ds_qmt"/>
+    <item DataSetName="ds_qdt"/>
+  </Datasets>
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" Orientation="poLandscape" PaperWidth="210" PaperHeight="148" PaperSize="11" LeftMargin="1" RightMargin="1" TopMargin="1" BottomMargin="1" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="73.70079" Left="0" Top="18.89765" Width="786.14224">
+      <TfrxMemoView Name="Memo1" Left="0" Top="0" Width="786.14" Height="30.23622" Font.Charset="1" Font.Color="-16777208" Font.Height="-21" Font.Name="宋体" Font.Style="1" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="成都欣福源中药饮片有限公司销售（税票）开票申请单"/>
+      <TfrxMemoView Name="Memo2" Left="0" Top="30.23622" Width="151.19" Height="22.67717" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="申请时间"/>
+      <TfrxMemoView Name="Memo3" Left="151.19" Top="30.23622" Width="359.06" Height="22.67717" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" DisplayFormat.Kind="fkDateTime" DisplayFormat.FormatStr="yyyy-mm-dd" Text="[ds_qmt.&#34;申请时间&#34;]"/>
+      <TfrxMemoView Name="Memo4" Left="510.25" Top="30.23622" Width="75.59" Height="22.67717" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="发票类型"/>
+      <TfrxMemoView Name="Memo5" Left="585.84" Top="30.23622" Width="64.25" Height="22.67717" Font.Charset="1" Font.Color="-16777208" Font.Height="-18" Font.Name="宋体" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="□专票"/>
+      <TfrxMemoView Name="Memo6" Left="650.09" Top="30.23622" Width="136.05" Height="22.67717" Font.Charset="1" Font.Color="-16777208" Font.Height="-18" Font.Name="宋体" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="□普票"/>
+      <TfrxMemoView Name="Memo7" Left="0" Top="52.91339" Width="786.14" Height="20.78741" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="1" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="开票明细"/>
+    </TfrxReportTitle>
+    <TfrxPageHeader Name="PageHeader1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="20.78741" Left="0" Top="117.16543" Width="786.14224">
+      <TfrxMemoView Name="Memo8" Left="0" Top="0" Width="37.8" Height="20.78741" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="1" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="序号"/>
+      <TfrxMemoView Name="Memo9" Left="37.8" Top="0" Width="113.39" Height="20.78741" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="1" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="单号"/>
+      <TfrxMemoView Name="Memo10" Left="151.19" Top="0" Width="94.49" Height="20.78741" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="1" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="发货日期"/>
+      <TfrxMemoView Name="Memo11" Left="245.68" Top="0" Width="264.57" Height="20.78741" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="1" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="客户名称"/>
+      <TfrxMemoView Name="Memo12" Left="510.25" Top="0" Width="75.59" Height="20.78741" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="1" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="业务员"/>
+      <TfrxMemoView Name="Memo13" Left="585.84" Top="0" Width="64.25" Height="20.78741" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="1" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="数量"/>
+      <TfrxMemoView Name="Memo14" Left="650.09" Top="0" Width="136.05" Height="20.78741" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="1" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="客户金额"/>
+    </TfrxPageHeader>
+    <TfrxGroupHeader Name="GroupHeader1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="0" Left="0" Top="200.31509" Width="786.14224" Condition="ds_qmt.&#34;客户名称&#34;"/>
+    <TfrxMasterData Name="MasterData1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="18.89765" Left="0" Top="222.99227" Width="786.14224" ColumnWidth="0" ColumnGap="0" DataSetName="ds_qmt" RowCount="0">
+      <TfrxMemoView Name="Memo15" Left="0" Top="0" Width="37.8" Height="18.89765" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" Fill.BackColor="11854022" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="[Line#]"/>
+      <TfrxMemoView Name="Memo16" Left="37.8" Top="0" Width="113.39" Height="18.89765" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" Fill.BackColor="11854022" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="[ds_qmt.&#34;开票单号&#34;]"/>
+      <TfrxMemoView Name="Memo17" Left="151.19" Top="0" Width="94.49" Height="18.89765" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" Fill.BackColor="11854022" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="[ds_qmt.&#34;出库日期&#34;]"/>
+      <TfrxMemoView Name="Memo18" Left="245.68" Top="0" Width="264.57" Height="18.89765" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" Fill.BackColor="11854022" ParentFont="False" VAlign="vaCenter" Text="[ds_qmt.&#34;客户名称&#34;]"/>
+      <TfrxMemoView Name="Memo19" Left="510.25" Top="0" Width="75.59" Height="18.89765" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" Fill.BackColor="11854022" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="[ds_qmt.&#34;业务员&#34;]"/>
+      <TfrxMemoView Name="Memo20" Left="585.84" Top="0" Width="64.25" Height="18.89765" DisplayFormat.FormatStr="0.##" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" Fill.BackColor="11854022" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="[ds_qmt.&#34;数量&#34;]"/>
+      <TfrxMemoView Name="Memo21" Left="650.09" Top="0" Width="136.05" Height="18.89765" DisplayFormat.FormatStr="0.##" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" Fill.BackColor="11854022" HAlign="haRight" ParentFont="False" VAlign="vaCenter" Text="[ds_qmt.&#34;已申请金额&#34;]"/>
+    </TfrxMasterData>
+    <TfrxGroupFooter Name="GroupFooter1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="18.89765" Left="0" Top="264.5671" Width="786.14224">
+      <TfrxMemoView Name="Memo22" Left="0" Top="0" Width="245.68" Height="18.89765" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" ParentFont="False" VAlign="vaCenter" Text=""/>
+      <TfrxMemoView Name="Memo23" Left="245.68" Top="0" Width="404.41" Height="18.89765" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="1" Frame.Typ="15" ParentFont="False" VAlign="vaCenter" Text="[ds_qmt.&#34;客户名称&#34; + ' 汇总']"/>
+      <TfrxMemoView Name="Memo24" Left="650.09" Top="0" Width="136.05" Height="18.89765" DisplayFormat.FormatStr="0.##" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="1" Frame.Typ="15" HAlign="haRight" ParentFont="False" VAlign="vaCenter" Text="[SUM(ds_qmt.&#34;已申请金额&#34;)]"/>
+    </TfrxGroupFooter>
+    <TfrxReportSummary Name="ReportSummary1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="56.69293" Left="0" Top="343.93723" Width="786.14224">
+      <TfrxMemoView Name="Memo25" Left="0" Top="0" Width="151.19" Height="37.79528" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="特殊情况说明"/>
+      <TfrxMemoView Name="Memo26" Left="151.19" Top="0" Width="634.95" Height="37.79528" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="1" Frame.Typ="15" ParentFont="False" VAlign="vaCenter" Text="[ds_qmt.&#34;备注&#34;]"/>
+      <TfrxMemoView Name="Memo27" Left="0" Top="37.79528" Width="151.19" Height="18.89765" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="申请人"/>
+      <TfrxMemoView Name="Memo28" Left="151.19" Top="37.79528" Width="359.06" Height="18.89765" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" ParentFont="False" VAlign="vaCenter" Text="[ds_qmt.&#34;申请人&#34;]"/>
+      <TfrxMemoView Name="Memo29" Left="510.25" Top="37.79528" Width="75.59" Height="18.89765" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="财务会计"/>
+      <TfrxMemoView Name="Memo30" Left="585.84" Top="37.79528" Width="200.3" Height="18.89765" Font.Charset="1" Font.Color="-16777208" Font.Height="-15" Font.Name="宋体" Font.Style="0" Frame.Typ="15" ParentFont="False" VAlign="vaCenter" Text=""/>
+    </TfrxReportSummary>
+  </TfrxReportPage>
+</TZyReport>
